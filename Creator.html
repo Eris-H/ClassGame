@@ -1,0 +1,87 @@
+<!--ERYX HORTIZUELA-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="GrandScript.js"></script>
+    <link rel = "stylesheet" href = "GrandFormat.css">
+    <title> Creator </title>
+</head>
+<body>
+
+    <!-- head of page -->
+    <nav>
+    <p class = "opener">
+        <!-- INCLUDE THESE ON EVERY HTML -->
+        <button onclick="HomeLoad()"> Go back Home </button>
+        <button onclick="CharacterCreatorLoad()"> Go to Character Creator </button>
+        <button onclick="CreationGuideLoad()"> Go to Character Guide </button>
+        <button onclick="WorldGuideLoad()"> Go to World Guide </button>
+        <h1 class = "opener"> CHARACTER CREATOR </h1>
+        <br>  
+    </p>  
+    </nav>
+
+    <!-- since the class is locked in once hit-->
+    <h1> Advisory: </h1>
+    <p> We do not reccomend creating your character without first looking at the Character Guide, which can be navigated to at the top of the page.</p>
+
+    <!-- where the player puts their name-->
+    <h2 class = "CHead"> Name </h2>
+    <form class = "statNum" id = "NameSubmit" onsubmit = "return false">
+        <br>
+        Character Name: <br> <input type = "text" id = "Name"/>
+        <br>
+        <input class = "fauxButton" type = "submit" onclick = "Names()"/>
+    </form>
+
+    <!-- the classes -->
+    <h2 class = "CHead"> Class </h2>
+    <br>
+    <button class = "Knight" id = "Knight" onclick="KnightSubs()"> KNIGHT </button>
+    <button class = "Martial" id = "Martial"  onclick="MartialSubs()"> MARTIAL ARTIST </button>
+    <button class = "Mage" id = "Mage" onclick="MageSubs()"> MAGE </button>
+    <button class = "Healer" id = "Healer" onclick="HealerSubs()"> HEALER </button>
+    <br>
+    <!-- where the details and subclass buttons appear-->
+    <span id = "ClassDeets"></span> 
+    <span id = "subclasses"></span> 
+    <span id = "subclassDeets"></span> 
+
+    <!-- all the stats -->
+    <h2 class = "CHead"> Stats </h2>
+
+    <!-- here's where we show how many points are left -->
+    <p class = "statNum"> Stat Points Left:  <div id = "Points"> 16 </div> </p> <br>
+    
+    <!-- all of the stats, and the buttons to change them-->
+    <p class = "statNum"> Strength:  <div id = "STR"> 1 </div> </p> <button class = "statButton" onclick="STRdown()"> &lt; </button>  <button class = "statButton"  onclick="STRup()"> &gt; </button>
+    <p class = "statNum"> Speed:  <div id = "SPD"> 10 </div> </p> <button class = "statButton"  onclick="SPDdown()"> &lt; </button>  <button  class = "statButton" onclick="SPDup()"> &gt; </button>
+    <p class = "statNum"> Resistance:  <div id = "RES"> 1 </div> </p> <button class = "statButton"  onclick="RESdown()"> &lt; </button>  <button  class = "statButton" onclick="RESup()"> &gt; </button>
+    <p class = "statNum"> Dexterity:  <div id = "DEX"> 1 </div> </p> <button class = "statButton"  onclick="DEXdown()"> &lt; </button>  <button  class = "statButton" onclick="DEXup()"> &gt; </button>
+    <p class = "statNum"> Charm:  <div id = "CHR"> 1 </div> </p> <button class = "statButton"  onclick="CHRdown()"> &lt; </button>  <button  class = "statButton" onclick="CHRup()"> &gt; </button>
+    <p class = "statNum"> Stamina:  <div id = "STM"> 2 </div> </p> <button  class = "statButton" onclick="STMdown()"> &lt; </button>  <button  class = "statButton" onclick="STMup()"> &gt; </button>
+    <p class = "statNum"> Intelligence:  <div id = "INT"> 1 </div> </p> <button  class = "statButton" onclick="INTdown()"> &lt; </button>  <button  class = "statButton" onclick="INTup()"> &gt; </button>
+    <p class = "statNum"> Focus:  <div id = "FCS"> 1 </div> </p> <button  class = "statButton" onclick="FCSdown()"> &lt; </button>  <button  class = "statButton" onclick="FCSup()"> &gt; </button>
+    <p class = "statNum"> Vitality:  <div id = "VIT"> 1 </div> </p> <button  class = "statButton" onclick="VITdown()"> &lt; </button>  <button  class = "statButton" onclick="VITup()"> &gt; </button>
+    <p class = "statNum"> Magic Tolerance:  <div id = "MTL"> 1 </div> </p> <button  class = "statButton" onclick="MTLdown()"> &lt; </button>  <button  class = "statButton" onclick="MTLup()"> &gt; </button>
+    <p class = "statNum"> Magic Capacity:  <div id = "MCP"> 1 </div> </p> <button  class = "statButton" onclick="MCPdown()"> &lt; </button>  <button  class = "statButton" onclick="MCPup()"> &gt; </button>
+    <p class = "statNum"> Magic Recovery:  <div id = "MCR"> 1 </div> </p> <button  class = "statButton" onclick="MCRdown()"> &lt; </button>  <button  class = "statButton" onclick="MCRup()"> &gt; </button>
+
+    <br> <br> <br>
+    <!-- finalize button, gives you final character desc-->
+    <p class = "finalize">     <button class = "FinalButton" id = "finalize" onclick = "CreationFinished()"> FINALIZE CHARACTER </button>    </p>
+    <div class = "finalCharacter" id = "FinalC"></span> 
+    
+    
+        <br><br><br><br><br><br><br><br><br><br>
+        <!-- the required footer -->
+        <footer>
+            Eryx "Eris" Hortizuela
+            <br> University of Advancing Technology
+            <br> 2625 W. BASELINE RD.
+            <br> TEMPE, AZ 85283
+        </footer>
+</body>
+</html>

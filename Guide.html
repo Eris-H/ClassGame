@@ -1,0 +1,172 @@
+<!--ERYX HORTIZUELA-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="GrandScript.js"></script>
+    <link rel = "stylesheet" href = "GrandFormat.css">
+    <title> Guide </title>
+</head>
+<body>
+
+    <nav>
+    <p class = "opener">
+        <!-- INCLUDE THESE ON EVERY HTML -->
+        <button onclick="HomeLoad()"> Go back Home </button>
+        <button onclick="CharacterCreatorLoad()"> Go to Character Creator </button>
+        <button onclick="CreationGuideLoad()"> Go to Character Guide </button>
+        <button onclick="WorldGuideLoad()"> Go to World Guide </button>
+        <h1 class = "opener"> CHARACTER GUIDE </h1>
+        <br>  
+    </p>  
+    </nav>
+
+    <!-- explain whats on the table -->
+    <h1> Classes </h1>
+    <p>
+        Here you will find a table showing the classes and what their benefits are. <br>
+        Each class has up to 3 stat boosts, a skill, and 3 subclasses.  <br>
+        Each subclass has up to 2 stat boosts and a skill.  <br>
+    </p>
+
+
+    <table id = "Classes" border = "2" width = "100%" > 
+        <!-- make em all grey-->
+        <col style = "background-color: rgb(221, 221, 221);">
+        <col style = "background-color: rgb(221, 221, 221);">
+        <col style = "background-color: rgb(221, 221, 221);">
+        <col style = "background-color: rgb(221, 221, 221);">
+        
+        <!-- all the classes and subclasses boxes are this clay-like color to be easy to see-->
+        <th style = "width: 25%; background-color: rgb(167, 69, 69); color:rgb(181, 255, 255);"> Knight </th>
+        <th style = "width: 25%; background-color: rgb(167, 69, 69); color:rgb(181, 255, 255);"> Martial Artist </th>
+        <th style = "width: 25%; background-color: rgb(167, 69, 69); color:rgb(181, 255, 255);"> Mage </th>
+        <th style = "width: 25%; background-color: rgb(167, 69, 69); color:rgb(181, 255, 255);"> Healer </th>
+
+        <tbody>
+            <!-- first stat boost-->
+            <tr id = "statBoost1"> 
+                <td> +1 strength </td>
+                <td> +1 strength </td>
+                <td> +1 magic tolerance </td>
+                <td> +1 magic capacity </td>
+            </tr>
+            <!-- second stat boost -->
+            <tr id = "statBoost2"> 
+                <td> +2 resistance </td>
+                <td> +2 tolerance </td>
+                <td> +1 magic capacity </td>
+                <td> +1 charm </td>
+            </tr>
+            <!-- third stat boost-->
+            <tr id = "statBoost3"> 
+                <td>  </td>
+                <td>  </td>
+                <td> +1 magic recovery </td>
+                <td> +1 vitality </td>
+            </tr>
+            <!-- primary skill -->
+            <tr id = "Skill"> 
+                <td> Armor Trained: can wear full plate armor with no drawbacks </td>
+                <td> MaMAr Practicioner: gain access to 1 Magical Martial Arts form </td>
+                <td> Catalyst Expert: can use multiple catalysts in one circuit </td>
+                <td> Supporter: Can use healing items on other people without an action </td>
+            </tr>
+            <!-- the first subclasses-->
+            <tr style = "background-color: rgb(167, 69, 69); color:rgb(181, 255, 255);" id = "Subclass1"> 
+                <td> Royal Knight </td>
+                <td> Striker </td>
+                <td> Pure Mage </td>
+                <td> Doctor </td>
+            </tr>
+            <!-- first subclass fist stats-->
+            <tr id = "Subclass1Stat1"> 
+                <td> +1 focus </td>
+                <td> +2 strength </td>
+                <td> +1 magic capacity </td>
+                <td> +1 magic tolerance </td>
+            </tr>
+            <!-- first subclass second stats-->
+            <tr id = "Subclass1Stat2"> 
+                <td> +1 vitality </td>
+                <td>  </td>
+                <td> +1 magic tolerance </td>
+                <td> +1 intelligence </td>
+            </tr>
+            <!-- first subclass skill-->
+            <tr id = "Subclass1Skill"> 
+                <td> Royal Efficiency: after defeating an enemy, restore 1 action </td>
+                <td> Full Force: the bonus di(c)e from offense boosts are 1d6 instead of 1d4 </td>
+                <td> Magic Tuned: can feel when magic is being used nearby, and tell the direction </td>
+                <td> Medical Specialist: +1d6 when using healing items </td>
+            </tr>
+            <!-- the second subclasses -->
+            <tr style = "background-color: rgb(167, 69, 69); color:rgb(181, 255, 255);" id = "Subclass2"> 
+                <td> Standard Knight </td>
+                <td> Grappler </td>
+                <td> Combat Mage </td>
+                <td> Sacrificed </td>
+            </tr>
+            <!-- 1st stat for the 2nd subclasses-->
+            <tr id = "Subclass2Stat1"> 
+                <td> +2 stamina </td>
+                <td> +1 dexterity </td>
+                <td> +1 focus </td>
+                <td> +2 vitality </td>
+            </tr>
+            <!-- 2nd stat for the 2nd subclasses -->
+            <tr id = "Subclass2Stat2"> 
+                <td>  </td>
+                <td> +1 stamina </td>
+                <td> +1 strength </td>
+                <td> </td>
+            </tr>
+            <!-- skill for the 2nd subclasses -->
+            <tr id = "Subclass2Skill"> 
+                <td> Horse Trained: you know how to ride mounts and gain +3 strength and dexterity when on one </td>
+                <td> Grand Slam: if grappling opponent, you can use an action to slam them into the ground, ending the grapple and dealing damage = targets resistance + users strength. This knocks them down </td>
+                <td> Multitasker: casts that only have 1 node in the circuit doesnt cost an action </td>
+                <td> Inverse Sacrifice: can convert 9 Mu into 1 point of vitality for themself </td>
+            <!-- the third subclasses -->
+            <tr style = "background-color: rgb(167, 69, 69); color:rgb(181, 255, 255);" id = "Subclass3"> 
+                <td> Village Knight </td>
+                <td> Tanker </td>
+                <td> Martial Mage </td>
+                <td> Farmer </td>
+            </tr>
+            <!-- 1st stat for the 3rd subclasses-->
+            <tr id = "Subclass3Stat1"> 
+                <td> +2 charm </td>
+                <td> +1 resistance </td>
+                <td> +2 strength </td>
+                <td> +1 resistance </td>
+            </tr>
+            <!-- 2nd stat for the 3rd subclasses -->
+            <tr id = "Subclass3Stat2"> 
+                <td>  </td>
+                <td> +1 vitality </td>
+                <td>  </td>
+                <td> +1 stamina </td>
+            </tr>
+            <!-- skill for the 3rd subclasses -->
+            <tr id = "Subclass3Skill"> 
+                <td> Friendly Face: enemies with less intelligence than your charm will surrender when below 5 vitality </td>
+                <td> Iron Skin: critical hits against you only ignore armor, not resistance </td>
+                <td> Internal Control: once per encounter, if hit with an attack that would be fatal, roll a d20 at 15 or above to survive at 1 vitality instead </td>
+                <td> Botony: can create healing items from plants </td>
+            </tr>
+        </tbody>
+
+    </table>
+
+    <br><br><br><br><br><br><br><br><br><br>
+    <!-- the required footer -->
+    <footer>
+        Eryx "Eris" Hortizuela
+        <br> University of Advancing Technology
+        <br> 2625 W. BASELINE RD.
+        <br> TEMPE, AZ 85283
+    </footer>
+</body>
+</html>
