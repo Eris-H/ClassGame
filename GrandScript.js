@@ -1,3 +1,4 @@
+//ERYX HORTIZUELA
 //strength
 var STR = 1;
 //speed
